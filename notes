@@ -1,8 +1,4 @@
 
-Command run to pull from github
-
-docker run -d -p 8081:80 -e 'GIT_EMAIL=donald@fullproxy.com' -e 'GIT_NAME=Donald Ross' -e 'GIT_USERNAME=DJR-FP' -e 'GIT_REPO=github.com/DJR-FP/245lab_webtest1' -e 'GIT_PERSONAL_TOKEN=0b35780ebf38acd8ffa60d3d438c316434a266e1' --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true richarvey/nginx-php-fpm:latest
-
 
 #passes the hostname of the machine
 --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true 
