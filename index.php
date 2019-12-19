@@ -24,40 +24,25 @@ echo '<p style="color: white"/p>';
 echo "Today Date is " . date("M,d,Y") . "<br>";
 echo "The Time is " . date("h:i:s") .  "<br>";
 
+echo "<br>";
 
-//$localIP = getHostByName(getHostName());
-//echo  "Hostname is $localIP<br>";
-//echo php_uname();
-//echo PHP_OS;
+$open = fopen(“hits.txt”, “r+”);
+$value = fgets($open);
+$close = fclose($open);
+
+$value++;
+
+$open = fopen(“hits.txt”, “w+”);
+fwrite($open, $value); // variable is not restated, bug fixed.
+$close = fclose($open);
+php echo $value; 
 
 
 
-echo 'F5 SNAT IP - '.$_SERVER['REMOTE_ADDR'];
 
 echo "<br>";
 
-$dc = $_SERVER['REMOTE_ADDR'];
-
-if ($dc == "192.168.60.104") {
-    echo "Connected Virtual Server on DC3 LTM";
-} elseif ($dc == "192.168.70.35") {
-    echo "Connected Virtual Server on DC2 LTM";
-} elseif ($dc == "192.168.103.55") {
-    echo "Connected Virtual Server on DC1 LTM";
-}
-
 echo "<br>";
-
-//echo 'Cookie is - '.$_COOKIE['COOKIE'];
-//echo 'Hello ' . htmlspecialchars($_COOKIE["name"]) . '!';
-//echo "<br>";
-
-//if(!isset($_COOKIE[$cookie_name])) {
-//    echo "Cookie named '" . $cookie_name . "' is not set!";
-//} else {
-//    echo "Cookie '" . $cookie_name . "' is set!<br>";
-//    echo "Value is: " . $_COOKIE[$cookie_name];
-//}
 
 
 echo "<br>";
