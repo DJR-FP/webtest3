@@ -26,18 +26,6 @@ echo "The Time is " . date("h:i:s") .  "<br>";
 
 echo "<br>";
 
-$open = fopen(“hits.txt”, “r+”);
-$value = fgets($open);
-$close = fclose($open);
-
-$value++;
-
-$open = fopen(“hits.txt”, “w+”);
-fwrite($open, $value); // variable is not restated, bug fixed.
-$close = fclose($open);
-php echo $value; 
-
-
 
 
 echo "<br>";
