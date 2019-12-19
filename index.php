@@ -25,14 +25,6 @@ echo "Today Date is " . date("M,d,Y") . "<br>";
 echo "The Time is " . date("h:i:s") .  "<br>";
 
 echo "<br>";
-
-
-
-echo "<br>";
-
-echo "<br>";
-
-
 echo "<br>";
 
      // create a new cURL resource
